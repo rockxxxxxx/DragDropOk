@@ -1,0 +1,14 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 5%;
+  background-color: blue;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+
+  color: white;
+  -webkit-box-shadow: white 0px 0px 50px;
+  -moz-box-shadow: white 0px 0px 50px;
+  box-shadow: white 0px 0px 50px;
+}
