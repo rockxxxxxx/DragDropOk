@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DragDropOk/static/css/main.295bba66.css",
+    "main.js": "/DragDropOk/static/js/main.b4340efa.js",
+    "static/js/787.ddc63995.chunk.js": "/DragDropOk/static/js/787.ddc63995.chunk.js",
+    "index.html": "/DragDropOk/index.html",
+    "main.295bba66.css.map": "/DragDropOk/static/css/main.295bba66.css.map",
+    "main.b4340efa.js.map": "/DragDropOk/static/js/main.b4340efa.js.map",
+    "787.ddc63995.chunk.js.map": "/DragDropOk/static/js/787.ddc63995.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.295bba66.css",
+    "static/js/main.b4340efa.js"
+  ]
+}
