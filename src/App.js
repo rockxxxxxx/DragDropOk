@@ -13,10 +13,9 @@ function App() {
       <div className="App">
         <Row>
           <Navigation />
-          <Right />
-          <Mid />
-
           <Left />
+          <Mid />
+          <Right />
         </Row>
       </div>
     </>

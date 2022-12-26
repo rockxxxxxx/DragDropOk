@@ -39,6 +39,7 @@ export default function Right() {
           <div className="d-grid gap-2">
             {!bar && (
               <Draggable
+                bounds={{ left: -1090, top: 0, right: 0, bottom: 0 }}
                 axis="x"
                 onStop={() => {
                   setList([
@@ -57,15 +58,10 @@ export default function Right() {
                 </Button>
               </Draggable>
             )}
-            <Button
-              variant="outline-success"
-              size="md"
-              style={{ textAlign: "left" }}
-            >
-              Row
-            </Button>
+
             {!chart && (
               <Draggable
+                bounds={{ left: -1090, top: 0, right: 0, bottom: 0 }}
                 onStop={() => {
                   setList([
                     ...list,
@@ -86,29 +82,9 @@ export default function Right() {
                 </Button>
               </Draggable>
             )}
-            <Button
-              variant="outline-success"
-              size="md"
-              style={{ textAlign: "left" }}
-            >
-              Header
-            </Button>
-            <Button
-              variant="outline-success"
-              size="md"
-              style={{ textAlign: "left" }}
-            >
-              Markdown
-            </Button>
-            <Button
-              variant="outline-success"
-              size="md"
-              style={{ textAlign: "left" }}
-            >
-              Divider
-            </Button>
             {!table && (
               <Draggable
+                bounds={{ left: -1090, top: 0, right: 0, bottom: 0 }}
                 onStop={() => {
                   setList([
                     ...list,
@@ -134,6 +110,35 @@ export default function Right() {
               size="md"
               style={{ textAlign: "left" }}
             >
+              Row
+            </Button>
+            <Button
+              variant="outline-success"
+              size="md"
+              style={{ textAlign: "left" }}
+            >
+              Header
+            </Button>
+            <Button
+              variant="outline-success"
+              size="md"
+              style={{ textAlign: "left" }}
+            >
+              Markdown
+            </Button>
+            <Button
+              variant="outline-success"
+              size="md"
+              style={{ textAlign: "left" }}
+            >
+              Divider
+            </Button>
+
+            <Button
+              variant="outline-success"
+              size="md"
+              style={{ textAlign: "left" }}
+            >
               Process Diagram
             </Button>
             <Button
@@ -143,28 +148,6 @@ export default function Right() {
             >
               Trigger Flow
             </Button>
-            {!test && (
-              <Draggable
-                onStop={() => {
-                  setList([
-                    ...list,
-                    {
-                      id: `Title${Math.floor(Math.random() * 90)}`,
-                      name: "Title",
-                    },
-                  ]);
-                  setTest(true);
-                }}
-              >
-                <Button
-                  variant="outline-success"
-                  size="md"
-                  style={{ textAlign: "left" }}
-                >
-                  Title
-                </Button>
-              </Draggable>
-            )}
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import Bar from "../bar/Bar";
 import Table from "../table/Table";
 import Chart from "../chart/Chart";
 import BarChart from "../bar/BarChart";
+import BlankComponent from "../blank/BlankComponent";
 
 export default function Mid() {
   const {
@@ -39,78 +40,80 @@ export default function Mid() {
     console.log(result);
   }
   return (
-    <DragDropContext onDragEnd={handleOnDragEnd}>
-      <Droppable droppableId="button" direction="horizontal">
-        {(provided) => (
-          <Col
-            xs={7}
-            style={{ marginTop: "40px" }}
-            className="button"
-            ref={provided.innerRef}
-            {...provided.draggableProps}
-            {...provided.dragHandleProps}
-          >
-            <Row xs={1} md={2}>
-              {list.map((item, index) => {
-                return (
-                  <Draggable
-                    key={`${item.id}`}
-                    draggableId={`${item.id}`}
-                    index={index}
-                  >
-                    {(provided) => (
-                      <div
-                        xs={7}
-                        style={{ marginBottom: "20px" }}
-                        variant="outline-success"
-                        size="md"
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                      >
-                        {item.name === "Table" ? (
-                          <Col style={{ marginBottom: "20px" }}>
-                            <Table />
-                          </Col>
-                        ) : (
-                          ""
-                        )}
+    <>
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        <Droppable droppableId="button" direction="horizontal">
+          {(provided) => (
+            <Col
+              xs={7}
+              style={{ marginTop: "40px" }}
+              className="button"
+              ref={provided.innerRef}
+              {...provided.draggableProps}
+              {...provided.dragHandleProps}
+            >
+              <Row xs={1} md={2}>
+                {list.map((item, index) => {
+                  return (
+                    <Draggable
+                      key={`${item.id}`}
+                      draggableId={`${item.id}`}
+                      index={index}
+                    >
+                      {(provided) => (
+                        <div
+                          xs={7}
+                          style={{ marginBottom: "20px" }}
+                          variant="outline-success"
+                          size="md"
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          {item.name === "Table" ? (
+                            <Col style={{ marginBottom: "20px" }}>
+                              <Table />
+                            </Col>
+                          ) : (
+                            ""
+                          )}
 
-                        {item.name === "Bar" ? (
-                          <Col style={{ marginBottom: "20px" }}>
-                            <BarChart />
-                          </Col>
-                        ) : (
-                          ""
-                        )}
+                          {item.name === "Bar" ? (
+                            <Col style={{ marginBottom: "20px" }}>
+                              <BarChart />
+                            </Col>
+                          ) : (
+                            ""
+                          )}
 
-                        {item.name === "Chart" ? (
-                          <Col style={{ marginBottom: "20px" }}>
-                            {" "}
-                            <Chart />
-                          </Col>
-                        ) : (
-                          ""
-                        )}
+                          {item.name === "Chart" ? (
+                            <Col style={{ marginBottom: "20px" }}>
+                              {" "}
+                              <Chart />
+                            </Col>
+                          ) : (
+                            ""
+                          )}
 
-                        {item.name === "Title" ? (
-                          <Col style={{ marginBottom: "20px" }}>
-                            {" "}
-                            <Title />
-                          </Col>
-                        ) : (
-                          ""
-                        )}
-                      </div>
-                    )}
-                  </Draggable>
-                );
-              })}
-              {provided.placeholder}
-            </Row>
-          </Col>
-        )}
-      </Droppable>
-    </DragDropContext>
+                          {item.name === "Title" ? (
+                            <Col style={{ marginBottom: "20px" }}>
+                              {" "}
+                              <Title />
+                            </Col>
+                          ) : (
+                            ""
+                          )}
+                        </div>
+                      )}
+                    </Draggable>
+                  );
+                })}
+                {provided.placeholder}
+              </Row>
+            </Col>
+          )}
+        </Droppable>
+      </DragDropContext>
+    </>
   );
 }
